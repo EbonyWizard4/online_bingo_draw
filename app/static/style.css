@@ -1,0 +1,80 @@
+body{
+    background-color: #ddd;
+    
+}
+
+h3 {
+    font-size: 40px;
+}
+
+p {
+    margin-bottom: 0;
+    font-size: 1.85rem;
+}
+
+footer {
+    color: #ddd;
+    background-color: #393939;
+    max-width: 650px;
+    max-height: 150px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+
+
+#num_luck {
+    font-size: 180px;
+    width: 450px;
+    height: 250px;
+}
+
+#botoes {
+    width: 450px;
+}
+
+#title_sorteio h2 {
+    font-size: 1.5rem;
+}
+
+#brasao {
+    width: 100%;
+    height: 100vh;
+    background-image: url(brasão\ mono-cor.png);
+    background-position: -7rem center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#grid p {
+    background-color: #393939;
+    color: #ddd;
+}
+
+#change-button {
+    width: 450px;
+}
+
+.heder_col{
+    border: 2px solid blueviolet;
+}
+
+.flash{
+    width: 450px;
+    height: 30px;
+    border: 5px solid blueviolet;
+}
+
+.bloco {
+    width:  450px;
+    height: 5rem;
+    border: 2px solid red;
+}
+
+.img-footer {
+    width: 3rem;
+    border: 2px solid rebeccapurple;
+}
+
