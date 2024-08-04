@@ -1,0 +1,154 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="main" id="brasao">
+
+    <div class="row  ">
+
+        <!-- gid sorteado -->
+        <div class="col-7 mr-0 p-0">
+            <!-- separar numeros em conjuntos -->
+            <div class="row mt-2" id="grid">
+                <div class="col-2">
+                    <div class="heder_col d-flex justify-content-center">
+                        <h3 class="">B</h3>
+                    </div>
+                    {% for item in arr_s %}
+                    <div class="border border-primary">
+                        <p class=" d-flex justify-content-center">{{item}}</p>
+
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-2">
+                    <div class="heder_col d-flex justify-content-center">
+                        <h3>I</h3>
+                    </div>
+                    {% for item in arr_o %}
+                    <div class="border border-primary">
+                        <p class=" d-flex justify-content-center">{{item}}</p>
+
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-2">
+                    <div class="heder_col d-flex justify-content-center">
+                        <h3>N</h3>
+                    </div>
+                    {% for item in arr_r %}
+                    <div class="border border-primary">
+                        <p class=" d-flex justify-content-center">{{item}}</p>
+
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-2">
+                    <div class="heder_col d-flex justify-content-center">
+                        <h3>G</h3>
+                    </div>
+                    {% for item in arr_t %}
+                    <div class="border border-primary">
+                        <p class=" d-flex justify-content-center">{{item}}</p>
+
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-2">
+                    <div class="heder_col d-flex justify-content-center">
+                        <h3>O</h3>
+                    </div>
+                    {% for item in arr_e %}
+                    <div class="border border-primary">
+                        <p class=" d-flex justify-content-center">{{item}}</p>
+
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+
+        <!-- controle do sorteio -->
+        <div class="col-5 mt-2">
+            <!-- title -->
+            <div class="" id="title_sorteio">
+                <h1 class="d-flex justify-content-center">
+                    SHOW DE PRÊMIOS
+                </h1>
+                <h2 class=" d-flex justify-content-center">
+                    Festa da Padroeira
+                </h2>
+                <p class="d-flex justify-content-center">
+                    Nossa Senhora Rainha da Paz
+                </p>
+            </div>
+
+            <!-- Mensagens -->
+            {% for message in get_flashed_messages() %}
+            <div class="flash d-flex justify-content-center">
+                {{message}}
+            </div>
+            {% endfor %}
+
+            <!-- Número sorteado -->
+            <div class="d-flex justify-content-center" id="num_luck">
+                {{ num_luck }}
+            </div>
+
+            <!-- Botões -->
+            <div class="d-flex justify-content-center gap-5" id="botoes">
+
+                <form class="d-flex justify-content-center" method="POST">
+                    <!-- 
+                -> verificar quantidade de numeros sorteados
+                -> disparar alerta: 
+                    "Todos os numeros foram sorteados" -->
+                    <input type="submit" value="Sorteio"
+                        class="btn btn-primary btn-lg">
+                </form>
+                <a href="/reset" class="btn btn-warning btn-lg">Reset</a>
+                <a href="./sorte" class="btn btn-success btn-lg">SORTE</a>
+            </div>
+            
+
+            <!-- Rodapé -->
+            <footer class="position-fixed end-0 bottom-0 p-3 pb-1">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                              <div class="col-md-2">
+                                <img src="../../static/brasao_footer.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-10">
+                                <div class="card-body">
+                                  <h5 class="card-title">Paróquia</h5>
+                                  <p class="card-text">Nossa Senhora rainha da Paz</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                              <div class="col-md-2">
+                                <img src="../../static/pascom_footer.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-10">
+                                <div class="card-body">
+                                  <h5 class="card-title">Copyright - PASCOM</h5>
+                                  <p class="card-text">Pastoral da Comunicação</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}
